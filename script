@@ -22,3 +22,4 @@ sudo rm -rf surfy-chinaz.com
 ls 
 #Lists all new files
 read -p "Press enter to continue"
+#Pause script, wait for imput
