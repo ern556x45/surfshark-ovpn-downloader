@@ -1,0 +1,24 @@
+#!/bin/bash
+sudo mkdir /etc/ovpn/ 
+#Creates directory for files, deprecated post first time use.
+cd /etc/ovpn
+#Enters file location
+sudo rm *_udp.opvn 
+#removes old UDP files
+sudo rm *_tcp.ovpn 
+#removes old TCP files
+sudo wget -p /tmp https://surfy-chinaz.com/dconfig/openvpn-config.zip
+#Downloads new files to temp folder to avoid later conflicts and bloat in the system
+sudo unzip surfy-chinaz.com/dconfig/openvpn-config.zip
+#Unarchives config files
+sudo mv *_udp.ovpn /etc/ovpn/ 
+#Moves UDP to apropriate folder
+sudo mv *_tcp.ovp /etc/ovpm/ 
+#Moves TCP to apropriate folder
+cd /etc/ovpn/ 
+#enters file directory
+sudo rm -rf surfy-chinaz.com
+#Deletes folder created after extracting files, our site admins are on crack
+ls 
+#Lists all new files
+read -p "Press enter to continue"
