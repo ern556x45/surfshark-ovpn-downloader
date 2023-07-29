@@ -1,4 +1,5 @@
 #!/bin/bash
+
 sudo mkdir /etc/ovpn/
 # Creates directory for files, deprecated post first time use.
 cd /etc/ovpn/
@@ -23,4 +24,5 @@ cd /etc/ovpn/
 # Enters intended file directory
 ls 
 # Lists all new files
+
 read -p "Update complete. Press enter to continue"
