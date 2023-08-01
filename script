@@ -20,9 +20,8 @@ sudo unzip surfy-chinaz.com/dconfig/openvpn-config.zip
 # Unarchives config files
 sudo mv *.ovpn /etc/ovpn/ 
 # Moves files to intended location
-cd /etc/ovpn/ 
-# Enters intended file directory
-ls 
-# Lists all new files
+#sudo sed -i '15s"^.*$"auth-user-pass /etc/openvpn/auth.conf"' *.ovpn
+#Disabled by default, adds automatic authentication during configuration using the .conf file for usr and pw.
 
-read -p "Update complete. Press enter to continue"
+
+read -p "Update to /etc/ovpn/ complete. Press enter to exit"
